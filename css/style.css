@@ -111,8 +111,14 @@ body {
   opacity: 0.7;
   transition: 0.3s;
 }
+.header__btn svg path {
+  transition: 0.3s;
+}
 .header__btn:hover {
   border: 1px solid #fff;
+}
+.header__btn:hover svg path {
+  fill: #fff;
 }
 .header__title {
   padding-left: 100px;
@@ -273,6 +279,13 @@ body {
   background: #ffffff;
   border-radius: 8px;
 }
+.portfolio__img img {
+  max-width: 100%;
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  height: 100%;
+}
 .portfolio__img-long {
   max-width: 100%;
   width: 100%;
@@ -337,7 +350,7 @@ body {
   width: 320px;
   margin-left: auto;
 }
-.mobile p{
+.mobile p {
   max-width: 100% !important;
   width: 100% !important;
 }
