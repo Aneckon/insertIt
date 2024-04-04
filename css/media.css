@@ -33,7 +33,6 @@
     padding-left: 140px;
   }
   .services__slider-wrapper__info::after {
-    top: -180px;
     max-width: 500px;
     height: 810px;
   }

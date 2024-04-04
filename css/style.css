@@ -117,6 +117,7 @@ body {
 }
 .header__btn:hover {
   border: 1px solid #fff;
+  color: #fff;
 }
 .header__btn:hover svg path {
   fill: #fff;
@@ -314,7 +315,7 @@ body {
   content: '';
   position: absolute;
   right: 0;
-  top: -180px;
+  top: -160px;
   background: #202020;
   max-width: 580px;
   width: 100%;
@@ -566,7 +567,7 @@ body {
   fill: #eb5757;
 }
 .footer__contact {
-  max-width: 413px;
+  max-width: 453px;
   width: 100%;
   display: flex;
   align-items: center;
