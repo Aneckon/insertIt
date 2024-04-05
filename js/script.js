@@ -21,21 +21,27 @@ $('.services__slider-wrapper__info').slick({
 });
 
 $(document).ready(function () {
-  //E-mail Ajax Send
-  $('form').submit(function () {
-    //Change
-    var th = $(this);
-    $.ajax({
-      type: 'POST',
-      url: 'mail.php', //Change
-      data: th.serialize(),
-    }).done(function () {
-      alert('Thank you!');
-      setTimeout(function () {
-        // Done Functions
-        th.trigger('reset');
-      }, 1000);
-    });
-    return false;
+  $('.contact__form').submit(function (event) {
+    event.preventDefault();
+
+    var templateParams = {
+      name: $('[name="Ім’я"]').val(),
+      phone: $('[name="Телефон"]').val(),
+      email: $('[name="Електрона пошта"]').val(),
+      message: $('[name="Коментар..."]').val(),
+    };
+
+    emailjs.send('service_7gof71f', 'template_lji0grl', templateParams).then(
+      function (response) {
+        // Вдало відправлено
+        alert('Ваше повідомлення було успішно відправлено.');
+        // Очистити форму після успішного відправлення
+        $('.contact__form')[0].reset();
+      },
+      function (error) {
+        // Помилка під час відправлення
+        alert('Сталася помилка під час відправлення повідомлення.');
+      },
+    );
   });
 });
