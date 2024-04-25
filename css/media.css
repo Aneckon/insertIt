@@ -47,7 +47,8 @@
     max-width: 760px;
   }
   .header__menu nav {
-    max-width: 499px;
+    max-width: 489px;
+    padding: 13px 25px;
   }
   .header__item {
     position: relative;
@@ -57,7 +58,7 @@
     font-size: 16px;
   }
   .header__btn {
-    max-width: 236px;
+    max-width: 206px;
     font-weight: 400;
     font-size: 16px;
   }
@@ -200,6 +201,7 @@
     font-weight: 400;
     font-size: 18px;
     margin: 0 auto;
+    margin-bottom: 20px;
   }
   .header__item::after {
     display: none;
